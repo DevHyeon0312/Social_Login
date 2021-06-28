@@ -23,6 +23,7 @@ class kakaoLoginRepository {
         private val TAG = kakaoLoginRepository::class.java.name
     }
 
+    /** 토큰이 있는지 판단 */
     fun hasToken(complete: (Int, Throwable?) -> Unit) {
         if (AuthApiClient.instance.hasToken()) {
             UserApiClient.instance.accessTokenInfo { _, error ->
@@ -48,6 +49,7 @@ class kakaoLoginRepository {
         }
     }
 
+    /** 카카오 로그인 */
     fun signIn(context: Context, complete: (OAuthToken?, Throwable?) -> Unit) {
         // 카카오톡이 설치되어 있으면 카카오톡으로 로그인, 아니면 카카오계정으로 로그인
         if (UserApiClient.instance.isKakaoTalkLoginAvailable(context)) {
@@ -73,6 +75,7 @@ class kakaoLoginRepository {
         }
     }
 
+    /** 카카오 로그아웃 */
     fun signOut(complete: (Throwable?) -> Unit) {
         // 로그아웃
         UserApiClient.instance.logout { error ->
