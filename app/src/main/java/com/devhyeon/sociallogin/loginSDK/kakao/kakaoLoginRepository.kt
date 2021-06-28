@@ -10,6 +10,13 @@ import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.model.KakaoSdkError
 import com.kakao.sdk.user.UserApiClient
 
+/**
+ * kakaoLoginRepository
+ * 카카오 api 에서 제공하는 카카오로그인을 하기위한 repository.
+ * 1. 토큰여부 확인
+ * 2. 로그인
+ * 3. 로그아웃
+ * */
 class kakaoLoginRepository {
     //TAG
     companion object {
