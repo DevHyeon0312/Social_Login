@@ -14,7 +14,10 @@ import com.devhyeon.sociallogin.ui.login.LoginActivity
 import com.devhyeon.sociallogin.ui.main.MainActivity
 import com.devhyeon.sociallogin.viewModels.IntroViewModel
 
-
+/**
+ * IntroActivity
+ * IntroViewModel 로 token 상태 , 네트워크 상태 등 다음 동작을 하기 위한 화면
+ * */
 class IntroActivity : AppCompatActivity() {
 
     private lateinit var introViewModel: IntroViewModel
@@ -25,20 +28,25 @@ class IntroActivity : AppCompatActivity() {
 
         val kakaoLoginRepository = kakaoLoginRepository()
 
+        //ViewModel
         introViewModel = ViewModelProvider(this,
             IntroViewModel.IntroViewModelFactory(kakaoLoginRepository)
         ).get(IntroViewModel::class.java)
 
+        //Add Observer
         addObserver()
-
     }
 
+    /** Start */
     override fun onStart() {
         super.onStart()
+        //introViewModel 진행 (token 상태 확인 및 딜레이)
         introViewModel.startInit()
     }
 
+    /** 옵저버 등록 */
     private fun addObserver() {
+        //token 상태에 따라 다음 Activity 결정
         introViewModel.loginState.observe(this@IntroActivity, Observer {
             when (it) {
                 NEED_TOKEN -> {
