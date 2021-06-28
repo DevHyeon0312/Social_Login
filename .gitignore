@@ -12,4 +12,6 @@
 /captures
 .externalNativeBuild
 .cxx
+/app/src/main/java/com/devhyeon/sociallogin/keys
+/app/src/main/java/com/devhyeon/sociallogin/keys/apiKey.kt
 local.properties
