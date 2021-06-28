@@ -12,6 +12,7 @@ import com.devhyeon.sociallogin.constant.HAS_TOKEN
 import com.devhyeon.sociallogin.constant.NEED_TOKEN
 import com.devhyeon.sociallogin.ui.login.LoginActivity
 import com.devhyeon.sociallogin.ui.main.MainActivity
+import com.devhyeon.sociallogin.viewModels.IntroViewModel
 
 
 class IntroActivity : AppCompatActivity() {

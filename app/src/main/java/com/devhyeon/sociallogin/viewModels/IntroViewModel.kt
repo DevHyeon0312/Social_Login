@@ -1,4 +1,4 @@
-package com.devhyeon.sociallogin.ui.intro
+package com.devhyeon.sociallogin.viewModels
 
 import androidx.lifecycle.*
 import com.devhyeon.sociallogin.loginSDK.kakao.kakaoLoginRepository
