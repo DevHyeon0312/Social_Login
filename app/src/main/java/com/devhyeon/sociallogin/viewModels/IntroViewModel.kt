@@ -7,6 +7,12 @@ import com.devhyeon.sociallogin.constant.NEED_TOKEN
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
+/**
+ * IntroViewModel
+ * 1. Token 여부 판단
+ * 2. 딜레이(1000ms) 주기
+ * 3. Add Network Check (예정)
+ * */
 class IntroViewModel(private val kakaoLoginRepository: kakaoLoginRepository) : ViewModel() {
     //TAG
     companion object {
@@ -15,6 +21,8 @@ class IntroViewModel(private val kakaoLoginRepository: kakaoLoginRepository) : V
 
     private val _loginState = MutableLiveData<Int>()
     val loginState: LiveData<Int> get() = _loginState
+
+    private val delayTime = 1000L
 
     /** Intro 초기화 시작 */
     fun startInit() {
@@ -40,7 +48,7 @@ class IntroViewModel(private val kakaoLoginRepository: kakaoLoginRepository) : V
     private fun runDelay(token: Int) {
         viewModelScope.launch {
             runCatching {
-                delay(1000L)
+                delay(delayTime)
             }.onSuccess {
                 _loginState.value = token
             }.onFailure {
