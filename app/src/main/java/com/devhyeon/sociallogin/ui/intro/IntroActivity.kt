@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.devhyeon.sociallogin.R
-import com.devhyeon.sociallogin.api.kakao.kakaoLoginRepository
+import com.devhyeon.sociallogin.loginSDK.kakao.kakaoLoginRepository
 import com.devhyeon.sociallogin.constant.ETC_ERROR
 import com.devhyeon.sociallogin.constant.HAS_TOKEN
 import com.devhyeon.sociallogin.constant.NEED_TOKEN

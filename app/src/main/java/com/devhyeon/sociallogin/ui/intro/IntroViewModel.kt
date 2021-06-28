@@ -1,9 +1,8 @@
 package com.devhyeon.sociallogin.ui.intro
 
 import androidx.lifecycle.*
-import com.devhyeon.sociallogin.api.kakao.kakaoLoginRepository
+import com.devhyeon.sociallogin.loginSDK.kakao.kakaoLoginRepository
 import com.devhyeon.sociallogin.constant.ETC_ERROR
-import com.devhyeon.sociallogin.constant.HAS_TOKEN
 import com.devhyeon.sociallogin.constant.NEED_TOKEN
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

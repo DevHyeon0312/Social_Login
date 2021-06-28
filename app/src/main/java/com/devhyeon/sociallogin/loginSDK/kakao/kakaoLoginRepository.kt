@@ -1,4 +1,4 @@
-package com.devhyeon.sociallogin.api.kakao
+package com.devhyeon.sociallogin.loginSDK.kakao
 
 import android.content.Context
 import android.util.Log
